@@ -29,9 +29,10 @@ resource "google_bigquery_dataset_iam_member" "reader_access" {
 }
 
 resource "google_bigquery_table" "student_onboarding" {
-  dataset_id = google_bigquery_dataset.staged_enforced.dataset_id
-  table_id   = "student_onboarding"
-  schema     = <<SCHEMA
+  dataset_id          = google_bigquery_dataset.staged_enforced.dataset_id
+  table_id            = "student_onboarding"
+  deletion_protection = false
+  schema              = <<SCHEMA
 [
   {"name": "student_name", "type": "STRING", "mode": "REQUIRED"},
   {"name": "age", "type": "INTEGER", "mode": "REQUIRED"},
