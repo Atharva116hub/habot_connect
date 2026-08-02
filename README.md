@@ -1,6 +1,6 @@
-# habot_connectcd ~/habot_connect
+# habot_connect
 
-cat > README.md << 'EOF'
+
 # HabotConnect Hiring Project — Junior Cloud & DevOps Engineer
 
 **Submitted by:** Atharva Topre
